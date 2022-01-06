@@ -25,15 +25,15 @@ export const Main = () => {
       ref={myRef}
     >
       <div className="lg:w-[40rem] flex flex-col items-center lg:items-start pr-10">
-        <p className="bg-violet text-white font-semibold py-1 px-3 rounded-full text-center">{early_access}</p>
+        <p className="bg-violet text-white font-semibold py-1 px-5 rounded-full text-center">{early_access}</p>
         <h1 className="text-5xl mt-4 font-extrabold text-center lg:text-left">{h1}</h1>
         <p className="mt-2 text-center lg:text-left">{p}</p>
-        <form className="mobile:flex my-4">
+        <form className="mobile:flex my-4 w-full mobile:items-center mobile:justify-center">
           <input 
             type="email"
             name="email"
             placeholder='Enter your email address'
-            className="w-64 h-12 mb-2 mobile:mb-0 border indent-3 mr-3 focus:outline-none"
+            className="w-full mobile:w-64 h-12 mb-2 mobile:mb-0 border indent-3 mr-3 focus:outline-none"
             value={values.email}
             onChange={handleChange}
           />

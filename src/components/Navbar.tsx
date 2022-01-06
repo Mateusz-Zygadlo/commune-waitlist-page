@@ -50,14 +50,12 @@ export const Navbar = () => {
         ) : (
           <>
             {isOpen ? (
-              <div 
-                onClick={() => setIsOpen(false)}
-                className=" border bg-white absolute -right-2 -top-1 p-4"  
-              >
+              <div className=" border bg-white absolute -right-2 -top-1 p-4">
                 <img 
                   src={Images.Close}
                   alt="close button"
-                  className="absolute right-4 top-4 scale-150"
+                  className="absolute right-4 top-4 scale-150 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 />
                 <div className="flex flex-col items-center justify-center w-full">
                   <ul className="flex flex-col pb-2 border-b mb-4 w-52">
