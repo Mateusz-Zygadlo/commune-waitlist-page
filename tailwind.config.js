@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         'main': '#F6F9FE',
         'violet': '#372865',
+      },
+      screens: {
+        'mobile': '600px',
       }
     },
   },

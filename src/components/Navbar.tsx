@@ -8,7 +8,7 @@ import {
   useWindowSize,
   useMeasure,
 } from '../hooks'
-import { MOBILE_SIZE } from '../constants'
+import { TABLET_SIZE } from '../constants'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +27,7 @@ export const Navbar = () => {
   
   return(
     <div 
-      className="px-5 md:px-16 lg:px-24 bg-main py-4 sticky top-0 w-full z-50"
+      className="px-5 md:px-16 lg:px-24 bg-main py-4 sticky -top-1 w-full z-50"
       ref={myRef}
     >
       <div className="flex justify-between relative">
@@ -35,7 +35,7 @@ export const Navbar = () => {
           src={Images.Logo}
           alt="logo"
         />
-        {width > MOBILE_SIZE ? (
+        {width > TABLET_SIZE ? (
           <div className="flex items-center">
             <ul className="flex mr-5">
               {links.map((link, index) => (
@@ -52,7 +52,7 @@ export const Navbar = () => {
             {isOpen ? (
               <div 
                 onClick={() => setIsOpen(false)}
-                className=" border absolute -right-2 -top-1 p-4"  
+                className=" border bg-white absolute -right-2 -top-1 p-4"  
               >
                 <img 
                   src={Images.Close}
